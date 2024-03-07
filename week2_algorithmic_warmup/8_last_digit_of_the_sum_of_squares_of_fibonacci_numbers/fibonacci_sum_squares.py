@@ -13,4 +13,4 @@ def fibonacci_sum_squares(n):
 
 if __name__ == '__main__':
     n = int(input())
-    print(fibonacci_sum_squares(n))
+    print(fibonacci_sum_squares(n % 60))

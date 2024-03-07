@@ -6,7 +6,22 @@ def lcm(a, b):
     assert False
 
 
+def gcd_efficient(a, b):
+    if a > b:
+        a1 = a
+        b1 = b
+    else:
+        a1 = b
+        b1 = a
+
+    if b1 == 0:
+        return a
+    c = a1 % b1
+    return gcd_efficient(b1, c)
+
+def lcm_efficient(a, b):
+    return (a * b) // gcd_efficient(a, b)
+
 if __name__ == '__main__':
     a, b = map(int, input().split())
-    print(lcm(a, b))
-
+    print(lcm_efficient(a, b))

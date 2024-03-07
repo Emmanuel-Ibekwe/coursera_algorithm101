@@ -11,6 +11,7 @@ def fibonacci_sum(n):
     return _sum % 10
 
 
+
 if __name__ == '__main__':
     n = int(input())
-    print(fibonacci_sum(n))
+    print(fibonacci_sum(n % 60))
